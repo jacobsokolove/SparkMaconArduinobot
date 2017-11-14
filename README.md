@@ -21,7 +21,7 @@ Laser cut:
     
   4 of Each:
     
-    Servo Side Holder:
+    Servo Side Holder
  
  3D Print:
  
