@@ -6,8 +6,9 @@ Parts list:
 
 Laser cut:
   1 of Each:
-    Arduino Holder Top
     
+    Arduino Holder Top  
+      
     Body  
     
   2 of Each:
@@ -60,15 +61,24 @@ NOTE: There is no current implementation for sensory input in the code. This wil
 To use the bot:
 
     Step 1: Clone the respository. 
+    
     Step 2: Open the Instruction PDF and build the bot to the specifications
+    
     Step 3: Download the Arduino IDE https://www.arduino.cc/en/Main/Software
+    
     Step 4: Open the file called SparkMaconRobot.INO. This will automatically launch the Arduino IDE.
+    
     Step 5: Plug the Arduino into the computer using the proper USB cable.
-    Step 6: Under the "Tools" tab in the Arduino IDE, navigate to "Board" and select Arduino/Genuino Uno.
+    
+    Step 6: Under the "Tools" tab in the Arduino IDE, navigate to "Board" and select Arduino/Genuino 
+            Uno.
+    
     Step 7: Under the "Tools" tab in the Arduino IDE, navigate to "Port" and select appropriate port.
-    Step 8: Upload the code to the arduino after making any desired changes. To upload, first select the check mark under 
-            "file" to check for compilation errors. Fix any errors that arise. Then, select the right arrow next to the
-            check mark to upload the code.
+    
+    Step 8: Upload the code to the arduino after making any desired changes. To upload, first select 
+            the check mark under "file" to check for compilation errors. Fix any errors that arise. 
+            Then, select the rigt arrow next to the check mark to upload the code.
+            
     Step 9: Unplug the Arduino from the computer.
+    
     Step 10: Plug the Arduino into the portable battery pack. The code will automatically run. 
-  
