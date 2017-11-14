@@ -9,17 +9,23 @@ Laser cut:
     Arduino Holder Top
     Body  
     
-  2 of Each
+  2 of Each:
+    
     Arduino Holder Side
+    
     Servo Bottom Holder
+    
     Wheel
     
   4 of Each:
+    
     Servo Side Holder:
  
  3D Print:
-  1 of Each:
-    Ping Pong Ball Caster https://www.thingiverse.com/thing:636967
+ 
+ 1 of Each:
+   
+   Ping Pong Ball Caster https://www.thingiverse.com/thing:636967
  
  Electronics:
   
