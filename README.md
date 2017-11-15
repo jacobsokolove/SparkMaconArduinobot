@@ -31,25 +31,17 @@ Laser cut:
  Electronics:
   
     1 Arduino Uno https://goo.gl/xTfv21
-    
     1 Mini Bread Board https://goo.gl/TCbYnq
-   
     2 HS 311 Servos https://goo.gl/xVaHu1
-   
     1 Ultrasonic Sensor https://goo.gl/bFWrfF
-   
     2 PhotoResistors https://goo.gl/h9Zg6X
-   
     1 Jumper Wire Pack https://goo.gl/1xumnE
   
   Additional Purchases:
     
     1 Ping Pong Ball https://goo.gl/Dio1XP
-    
     1 Set of Zipties for cable management https://goo.gl/We2zzo
-    
     1 High Temp Hot Glue Gun https://goo.gl/PSGf2z
-    
     1 Package of High Temp Hot Glue Gun Sticks  ** Glue sticks are in the hot glue gun kit
     
 NOTE: There is no current implementation for sensory input in the code. This will be added in the coming weeks.
