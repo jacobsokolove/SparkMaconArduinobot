@@ -1,23 +1,21 @@
 # SparkMaconArduinobot
 A simple robot designed for teaching people new to programming how to use Arduino C to program a bot.
 
-To make your own: using the attached files laser cut the frame out of 1/8" material. 
+To make your own: using the attached files laser cut the frame out of 1/8" x 8" x 12".
+
 Parts list:
 
 Laser cut:
   
   1 of Each:
-    
-    Arduino Holder Top  
-      
+  
+    Arduino Holder Top    
     Body  
     
   2 of Each:
     
     Arduino Holder Side
-    
     Servo Bottom Holder
-    
     Wheel
     
   4 of Each:
