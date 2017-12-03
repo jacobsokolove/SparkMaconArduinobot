@@ -44,43 +44,48 @@
 
   const int trigPin = 4;
   const int echoPin = 5;
-  
-// Control Structure for Movement Declarations
-
-  int cwAngle;   
-  int cwAngleScaleFactor = cwAngle * 8;
-
-  int ccwAngle;   
-  int ccwAngleScaleFactor = ccwAngle * 8;
-  
-  int forwardDistance;
-  int forwardDistanceScaleFactor = forwardDistance * 100;
-
-  int backwardDistance;
-  int backwardDistanceScaleFactor = backwardDistance * 100;
 
   long duration;
   int sensorDistance;
 
 
 
-void setup() {
 
 
-//Servo (Motor) Setup
-
-  pinMode(MotorLeft,OUTPUT); 
-  pinMode(MotorRight,OUTPUT);
-
-
-// Ultrasonic Sensor Setup
-
-  pinMode(trigPin, OUTPUT); // Sets the trigPin as an Output
-  pinMode(echoPin, INPUT); // Sets the echoPin as an Input
   
-  Serial.begin(9600); // Starts the serial communication
+//********************************************//
+// *                                         *//
+// * THE ANGLES AND DISTANCES CAN BE CHANGED *//
+// *                                         *//
+//********************************************//
+
+
+/* 
+ * Input desired angle of turn relative to the y axis
+ * i.e. 90 deg = sharp right 
+ * 
+ * varying the angle will allow the bot to follow various
+ * paths to creating different polygons
+ */
+ 
+  int  cwAngle = 90; // makes a right turn
+  int forwardDistance = 3; // moves roughly 3 inches
+
+  int ccwAngle = 90; // makes a left turn
+  int backwardDistance = 3; // moves roughly 3 inches
+
+
+
+
+
   
-}
+// DO NOT CHANGE THE NEXT 4 LINES 
+
+  int cwAngleScaleFactor = cwAngle * 8;
+  int ccwAngleScaleFactor = ccwAngle * 8;
+  int forwardDistanceScaleFactor = forwardDistance * 100;
+  int backwardDistanceScaleFactor = backwardDistance * 100;
+
 
 
 void forward(){
@@ -172,49 +177,58 @@ void distanceSensor(){
 
 }
 
-void sight() {
 
-// Defines the photoresistors  pins 
+void setup() {
 
-  int leftPhotoresistor = analogRead(A0);
-  int rightPhotoresistor = analogRead(A1);
 
-  // read the input on analog pin 0:
-  // print out the value you read:
-  Serial.print("Left: ");
-  Serial.println(leftPhotoresistor);
-   Serial.print("Right: "); 
-  Serial.println(rightPhotoresistor);
-  delay(1000);        // delay in between reads for stability
+//Servo (Motor) Setup
+
+  pinMode(MotorLeft,OUTPUT); 
+  pinMode(MotorRight,OUTPUT);
+
+
+  delay(10);
+  ServoLeft.attach(MotorLeft);
+  ServoRight.attach(MotorRight);
+
+// Ultrasonic Sensor Setup
+
+  pinMode(trigPin, OUTPUT); // Sets the trigPin as an Output
+  pinMode(echoPin, INPUT); // Sets the echoPin as an Input
+  
+  Serial.begin(9600); // Starts the serial communication
+  
 }
+
 
 void loop() {
 
-//************************************//
-// *                                 *//
-// * THESE PARAMETERS CAN BE CHANGED *//
-// *                                 *//
-//************************************//
+  // Defines the photoresistors  pins 
+
+  int leftPhotoresistor = analogRead(A0);
+  int rightPhotoresistor = analogRead(A1);
+  
+  // read the input on analog pin 0 and 1:
+  // print out the value you read:
+  
+  Serial.print("Left resistor: ");
+  Serial.println(leftPhotoresistor);
+  
+  Serial.print("Right resistor: "); 
+  Serial.println(rightPhotoresistor);
+  delay(1000);        // delay in between reads for 
 
 
-/* 
- * Input desired angle of turn relative to the y axis
- * i.e. 90 deg = sharp right 
- * 
- * varying the angle will allow the bot to follow various
- * paths to creating different polygons
- */
- 
-  cwAngle = 90; // makes a right turn
-  forwardDistance = 3; // moves roughly 3 inches
+  distanceSensor();
 
-  ccwAngle = 90; // makes a right turn
-  backwardDistance = 3; // moves roughly 3 inches
+
+
+  
 
 
 //Automation Section:
 
-  if(sensorDistance<5){
+  if(sensorDistance<6){
     
   backward();
   
@@ -226,11 +240,12 @@ void loop() {
     
   }
 
-  if(leftPhotresistor && rightPhotoresistor <300){
+
+  if(leftPhotoresistor && rightPhotoresistor > 300){
     
     if(leftPhotoresistor<800){
 
-      turnClockwise():
+      turnClockwise();
     
     }
 
@@ -253,26 +268,7 @@ void loop() {
     }
   
   }
+  
 
   
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
