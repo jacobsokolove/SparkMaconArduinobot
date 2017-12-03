@@ -43,15 +43,12 @@ Laser cut:
     1 Set of Zipties for cable management https://goo.gl/We2zzo
     1 High Temp Hot Glue Gun https://goo.gl/PSGf2z
     1 Package of High Temp Hot Glue Gun Sticks  ** Glue sticks are in the hot glue gun kit
-    
-NOTE: There is no current implementation for sensory input in the code. This will be added in the coming weeks.
-      The goal is to use sensory input to start various functions on the bot. The client has not specified
-      the desired functions. 
+     
       
       
 To use the bot:
 
-    Step 1: Clone the respository. 
+    Step 1: Clone the repository. 
     
     Step 2: Open the Instruction PDF and build the bot to the specifications
     
