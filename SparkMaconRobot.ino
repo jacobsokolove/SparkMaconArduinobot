@@ -44,13 +44,6 @@
 
   const int trigPin = 4;
   const int echoPin = 5;
-
-
-// Defines the photoresistors  pins 
-
-  int leftPhotoresistor = analogRead(A0);
-  int rightPhotoresistor = analogRead(A1);
-
   
 // Control Structure for Movement Declarations
 
@@ -180,6 +173,12 @@ void distanceSensor(){
 }
 
 void sight() {
+
+// Defines the photoresistors  pins 
+
+  int leftPhotoresistor = analogRead(A0);
+  int rightPhotoresistor = analogRead(A1);
+
   // read the input on analog pin 0:
   // print out the value you read:
   Serial.print("Left: ");
@@ -221,9 +220,9 @@ void loop() {
   
   }
 
-  else if(){
+  else {
 
-    forward():
+    forward();
     
   }
 
@@ -235,7 +234,7 @@ void loop() {
     
     }
 
-    else if(){
+    else {
 
       forward();
     
@@ -243,11 +242,11 @@ void loop() {
     
     if(rightPhotoresistor<800){
 
-      turnCounterClockwise():
+      turnCounterClockwise();
     
     }
 
-    else if(){
+    else {
 
       forward();
     
