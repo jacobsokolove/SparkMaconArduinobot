@@ -205,8 +205,8 @@ void loop() {
 
   // Defines the photoresistors  pins 
 
-  int leftPhotoresistor = analogRead(A0);
-  int rightPhotoresistor = analogRead(A1);
+  int leftPhotoresistor = analogRead(A5);
+  int rightPhotoresistor = analogRead(A4);
   
   // read the input on analog pin 0 and 1:
   // print out the value you read:
